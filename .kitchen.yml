@@ -1,0 +1,31 @@
+driver:
+  name: vagrant
+  vm_hostname: roland-testkitchen-01
+
+provisioner:
+  name: chef-zero
+
+platforms:
+- name: centos-6.9
+  driver_config:
+    box: bento/centos-6.9
+    require_chef_omnibus: true
+    customize:
+      cpus: 2
+      memory: 20148
+      natdnshostresolver1: 'on'
+      natdnsproxy1: 'on'
+- name: centos-7.3
+  driver_config:
+    box: bento/centos-7.3
+    require_chef_omnibus: true
+    customize:
+      cpus: 2
+      memory: 2048
+      natdnsresolver1: 'on'
+      natdnsproxy1: 'on'
+
+  suites:
+  - name: default
+    run-list:
+    recipe[cookbook-name::recipe_name]
