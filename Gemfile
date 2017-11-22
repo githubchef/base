@@ -1,4 +1,11 @@
 source 'https://rubygems.org'
 
-gem 'inspec'
+gem 'chefspec'
+gem 'fauxhai'
+gem 'chef'
+gem 'rubocop'
+gem 'thor-scmversion'
+gem 'test-kitchen'
 gem 'kitchen-inspec'
+gem 'inspec'
+gem 'cookbook-development', :git => 'https://github.com/RallySoftware-cookbooks/cookbook-development'
